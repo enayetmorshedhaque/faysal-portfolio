@@ -32,6 +32,14 @@
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
+
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
 }
 
 html,
@@ -273,6 +281,10 @@ h3 {
   flex-direction: row;
 }
 
+.work-card-padding {
+  padding: 3rem;
+}
+
 .work-image,
 .work-details {
   width: 50%;
@@ -294,6 +306,24 @@ h3 {
   object-fit: cover;
   color: transparent;
   border-radius: 0.75rem;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+}
+
+.work-image img:hover {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.shadow-large {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .work-content {
@@ -384,21 +414,25 @@ h3 {
     flex-direction: column;
   }
 
+  .work-card-padding {
+    padding: 2rem;
+  }
+
   .work-image,
   .work-details {
     width: 100%;
   }
 
-  .work-image:nth-child(odd) {
+  .work-image {
     border-top-left-radius: 0.75rem;
-    border-bottom-left-radius: 0;
     border-top-right-radius: 0.75rem;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    order: 1;
   }
 
-  .work-image:nth-child(even) {
-    border-bottom-left-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
-    border-top-right-radius: 0;
+  .work-details {
+    order: 2;
   }
 }
 
@@ -467,6 +501,10 @@ h3 {
     flex-direction: column;
   }
 
+  .work-card-padding {
+    padding: 1.5rem;
+  }
+
   .work-image,
   .work-details {
     width: 100%;
@@ -479,12 +517,6 @@ h3 {
     border-bottom-right-radius: 0 !important;
     order: 1;
   }
-
-  /* .work-image:nth-child(even) {
-    border-bottom-left-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
-    border-top-right-radius: 0;
-  } */
 
   .work-details {
     order: 2;
