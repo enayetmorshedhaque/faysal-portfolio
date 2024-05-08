@@ -103,7 +103,7 @@ body {
 }
 
 .text-dark {
-  background-color: var(--text-dark);
+  color: var(--text-dark);
 }
 
 .text-dark-50 {
@@ -390,6 +390,29 @@ h3 {
 
 .institute-logo img {
   max-width: 120px;
+}
+
+.educational-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.educational-institute-logo img {
+  max-width: 100px;
+}
+
+.testimonial-card-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.testimoniare-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
