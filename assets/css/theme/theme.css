@@ -398,10 +398,6 @@ h3 {
   align-items: center;
 }
 
-.educational-institute-logo img {
-  max-width: 100px;
-}
-
 .testimonial-card-content {
   display: flex;
   align-items: center;
@@ -413,6 +409,39 @@ h3 {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
+}
+
+.text-extra-large {
+  width: 36rem;
+}
+
+.contact-me-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contact-me-div-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-icon {
+  font-size: 28px;
+}
+
+.social-contact-icon {
+  font-size: 24px;
+}
+
+.footer-py {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -596,5 +625,25 @@ h3 {
 
   .work-container:nth-child(even) .work-details {
     order: 2;
+  }
+
+  .text-extra-large {
+    width: 100%;
+  }
+
+  .contact-me-div {
+    gap: 1.5rem;
+  }
+
+  .contact-me-div-inner {
+    gap: 0.25rem;
+  }
+
+  .contact-details {
+    gap: 0.5rem !important;
+  }
+
+  .contact-icon {
+    font-size: 20px;
   }
 }
